@@ -5,15 +5,15 @@ import UserFrom from "../components/UserFrom";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/React-CRUD-Apps",
     element: <App />,
     children: [
       {
-        path: "",
+        path: "/React-CRUD-Apps",
         element: <Home />,
       },
       {
-        path: "user-form",
+        path: "/React-CRUD-Apps/user-form",
         element: <UserFrom />,
       },
     ],

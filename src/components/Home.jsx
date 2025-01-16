@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Link
-        to={"/user-form"}
+        to={"/React-CRUD-Apps/user-form"}
         onClick={() => addUser}
         className="btn btn-success float-end mt-5 p-2 "
       >
@@ -40,7 +40,7 @@ const Home = () => {
               <td>{user.email}</td>
               <td className="d-flex flex-row bd-highlight p-2">
                 <Link
-                  to={"/user-form"}
+                  to={"/React-CRUD-Apps/user-form"}
                   className="btn btn-success text-center"
                   onClick={() => findUserById(user.id)}
                 >
