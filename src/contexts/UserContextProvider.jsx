@@ -9,12 +9,17 @@ const UserContextProvider = ({ children }) => {
   const [editUserId, setEditUserId] = useState(null);
 
   const loadUsers = async () => {
-    const response = await axios.get(
-      `https://jsonplaceholder.typicode.com/users`
-    );
-    const user = response.data;
-    localStorage.setItem("users", JSON.stringify(user));
-    toast.success("Data fetched and saved in local storage.");
+    try {
+      const response = await axios.get(
+        `https://jsonplaceholder.typicode.com/users`
+      );
+      const user = response.data;
+      localStorage.setItem("users", JSON.stringify(user));
+      toast.success("Data fetched and saved in local storage.");
+    } catch (error) {
+      console.log(error);
+      toast.error("Error occure.", error);
+    }
   };
 
   useEffect(() => {
