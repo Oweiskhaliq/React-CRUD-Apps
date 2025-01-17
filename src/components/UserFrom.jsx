@@ -13,7 +13,7 @@ const UserFrom = () => {
     } else {
       addUser();
     }
-    navigate("/");
+    navigate("/React-CRUD-Apps");
   };
 
   return (
