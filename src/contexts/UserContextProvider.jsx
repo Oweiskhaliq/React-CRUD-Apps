@@ -7,6 +7,8 @@ const UserContextProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState({ name: "", username: "", email: "" });
   const [editUserId, setEditUserId] = useState(null);
+  //for model box
+  const [show, setShow] = useState(false);
 
   const loadUsers = async () => {
     try {
@@ -82,6 +84,8 @@ const UserContextProvider = ({ children }) => {
         setEditUserId,
         newUser,
         setNewUser,
+        show,
+        setShow,
       }}
     >
       {children}
